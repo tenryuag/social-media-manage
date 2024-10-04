@@ -1,21 +1,25 @@
-# Dependencies that this project use
+# Getting Started with Create React App
 
-- React Router DOM
+- React router DOM
+  - To manage navigation between different sections of the app (dashboard, configuration, metrics).
 ``` 
 npm install react-router-dom
 ``` 
 - Redux
-``` 
-npm install redux react-redux 
-``` 
+  - To manage the global state of the application (users, logged in accounts, posts).
+```
+npm install redux react-redux
+```
 - Axios
-``` 
+  - To make HTTP requests to social network APIs (when authenticating users).
+```
 npm install axios
-``` 
+```
 - OAuth 2.0
-``` 
+```
 npm install @auth0/auth0-react
-``` 
+```
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
