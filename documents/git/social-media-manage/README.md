@@ -1,26 +1,21 @@
 # Dependencies that this project use
 
 - React Router DOM
-
-```
+``` 
 npm install react-router-dom
-```
-
+``` 
 - Redux
-
 ``` 
 npm install redux react-redux 
-```
-
+``` 
 - Axios
-```
+``` 
 npm install axios
-```
-
+``` 
 - OAuth 2.0
-```
+``` 
 npm install @auth0/auth0-react
-```
+``` 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
