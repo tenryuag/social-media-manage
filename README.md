@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Dependencies that this project use
 
 - React router DOM
   - To manage navigation between different sections of the app (dashboard, configuration, metrics).
