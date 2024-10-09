@@ -33,9 +33,9 @@ const LoginButton = () => {
 
   return(
     <div className="loginWrapper">
-      <a onClick={facebookLogin} className="login">
+      <button onClick={facebookLogin} className="login">
         <span>Facebookで接続</span>
-      </a>
+      </button>
     </div>
   );
 };
