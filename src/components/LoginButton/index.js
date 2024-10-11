@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 
-const LoginButton = () => {
+const LoginButton = ({ onLogin }) => {
 
   const facebookLogin = () => {
     if (!window.FB) return;
@@ -25,8 +25,13 @@ const LoginButton = () => {
       // Leer datos del usuario
       window.FB.api('/me?fields=id,name,email,picture', userData => {
         console.log(userData);
-
         //almacenar la sesion del usuario en la app
+        const user = {
+          ...userData,
+          accessToken: response.authResponse.accessToken
+        };
+
+        onLogin(user); //enviar datos al componente padre
       });
     }
   };
