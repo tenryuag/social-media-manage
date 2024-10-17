@@ -1,6 +1,12 @@
 import React from "react";
 import './styles.css';
 
+declare global {
+  interface Window {
+    FB: any;
+  }
+}
+
 const LoginButton = ({ onLogin }) => {
 
   const facebookLogin = () => {
@@ -31,7 +37,12 @@ const LoginButton = ({ onLogin }) => {
           accessToken: response.authResponse.accessToken
         };
 
-        onLogin(user); //enviar datos al componente padre
+        // Obtener métricas de la cuenta
+        window.FB.api('/me/insights?metric=page_impressions,page_engaged_users', metricsData => {
+          console.log(metricsData);
+          user.metrics = metricsData.data;
+          onLogin(user); //enviar datos al componente padre
+        });
       });
     }
   };

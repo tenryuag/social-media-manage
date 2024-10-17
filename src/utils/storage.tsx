@@ -4,7 +4,8 @@ const setItem = (key, value) => {
 
 const getItem = (key) => {
     if (window.localStorage.getItem(key)) {
-        JSON.parse(window.localStorage.getItem(key));
+        const item = window.localStorage.getItem(key);
+        return item ? JSON.parse(item) : undefined;
     }
     return undefined;
 }
@@ -14,7 +15,7 @@ export function setUser(user) {
 }
 
 export function getUser() {
-    getItem('user');
+    return getItem('user');
 }
 
 export function clear() {
